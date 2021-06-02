@@ -36,15 +36,26 @@ def monte_carlo(n) :
     ins=0
     out=0
     tot=0
-    while n>0 :
+    while n>0 : 
         x=random.random()
         y=random.random()
-        if x**2+y**2 >1 :
-            out+=1
+        if x*2+y*2 >1 :
+            out = out+1
         else :
-            ins+=1
+            ins=ins+1
             tot=ins+out
             ret=4*ins/tot
         n=n-1
     ret=(4*ins)/tot
     return ret
+
+
+
+def wallis(i) :
+    prod=1  
+    n=1
+    while n <= i:
+        prod=prod*(4*n*n)/(4*n*n-1)
+        n=n+1
+    retu=prod*2
+    return retu
