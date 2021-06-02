@@ -39,7 +39,7 @@ def monte_carlo(n) :
     while n>0 : 
         x=random.random()
         y=random.random()
-        if x*2+y*2 >1 :
+        if x**2+y**2 >1 :
             out = out+1
         else :
             ins=ins+1
