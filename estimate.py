@@ -30,3 +30,21 @@ class TestMC(unittest.TestCase):
     
 if __name__ == "__main__":
     unittest.main()
+    
+import random
+def monte_carlo(n) :
+    ins=0
+    out=0
+    tot=0
+    while n>0 :
+        x=random.random()
+        y=random.random()
+        if x**2+y**2 >1 :
+            out+=1
+        else :
+            ins+=1
+            tot=ins+out
+            ret=4*ins/tot
+        n=n-1
+    ret=(4*ins)/tot
+    return ret
